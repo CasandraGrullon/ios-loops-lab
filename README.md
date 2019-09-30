@@ -13,60 +13,84 @@
 ## Question 1
 
 Write code that prints all the numbers from 1 to 150, **inclusive.**
-
+for number in 1...150 {
+print(number)
+}
 ***
 ## Question 2
 
 Write code that prints all the numbers from 142 to 159, **exclusive.**
-
+for number in 142..<159{
+print(number)
+}
 ***
 ## Question 3
 
 Write code that prints only the even numbers from 15 to 80, **inclusive.**
-
+for number in 15...80 where number % 2 == 0 {
+print("\(number) is an even number")
+}
 ***
 ## Question 4
 
 Write code that prints only the odd numbers from 19 to 51, **inclusive.**
-
+for number in 19...51 {
+if num % 2 == 0 {
+continue
+}
+print(number)
+}
 ***
 ## Question 5
 
 Write code that prints all the numbers that end in a **5** from 1 to 100, **exclusive.**
-
+for number in 1..<100 where number % 10 == 5 {
+print(number)
+}
 ***
 ## Question 6
 
 Write code that prints all the numbers that end in a 7 from 1 to 40, **inclusive.**
-
+for number in 1...40 where number % 10 == 7 {
+print(number)
+}
 ***
 ## Question 7
 
 Given a range of numbers from 20 to 150 inclusive, print out all the numbers that follows these conditions:
 
 `Numbers that are divisible by 3`
-
+for number in 20...150 where number % 3 == 0 {
+print("The number \(number) is divisible by 3")
+}
 ***
 ## Question 8
 
 Given a range of numbers from 20 to 150 inclusive, print out all the numbers that follows these conditions:
 
 `Numbers that are divisible by 2 and 3`
-
+for number in 20...150 where number % 2 == 0 && number % 3 == 0 {
+print("The number \(number) is divisible by the numbers 2 and 3")
+}
 ***
 ## Question 9
 
 Given a range of numbers from 20 to 150 inclusive, print out all the numbers that follows these conditions:
 
 `Numbers that end with a 4`
-
+for numbers in 20...150 where number % 10 == 4 {
+print(number)
+}
 ***
 ## Question 10
 
 Given a range of numbers from 20 to 150, print out all the numbers that follows these conditions:
 
 `Print out numbers: 31, 35, 40 to 60.`
-
+for number in 2...150 {
+if number == 31 || number == 35 || (number > 39 && number <= 60) {
+   print(number) }
+}
 ***
 ## Question 11
 
@@ -79,7 +103,7 @@ while (i > 3) {
     i += 1
 }
 
-// Your explanation here
+// The loop is infinite. 
 ```
 
 ***
@@ -91,6 +115,10 @@ Change the code below to make the loop stop executing when i reaches 9.
 var i = 5
 
 while (i > 3) {
+    i += 1
+}
+answer:
+while (i > 9) {
     i += 1
 }
 ```
@@ -106,6 +134,10 @@ var i = 5
 while (i > 3) {
     i += 1
 }
+answer:
+while (i <= 1000) {
+    i += 1
+}
 ```
 
 ***
@@ -117,6 +149,13 @@ Change the code below to make the loop stop executing after it has run 1,000 tim
 var i = 5
 
 while (i > 3) {
+    i += 1
+}
+answer:
+while (i <= 1000) {
+if i % 2 == 0 {
+print("countdown \(i)")
+}
     i += 1
 }
 ```
@@ -141,6 +180,10 @@ repeat {
     print("i = \(i)")
     i += 1
 } while i <= 10
+
+Answer: The first loop would print i = 1 to 10. The second one wouldn't run because they declared i after the print statement, what is being printed is "i = \(i)"). 
+
+
 ```
 
 # Bonus =)
@@ -149,6 +192,7 @@ repeat {
 ## Question 1
 
 What's the difference between `break` and `continue`?  Give an example that demonstrates their differences.
+Answer: Breaks will stop the loop once it meets the condition listed. Continue will skip the condition listed.
 
 ***
 ## Question 2
